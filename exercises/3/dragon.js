@@ -1,9 +1,10 @@
 class Dragon{
-    constructor(name,rider,color,hungry = true){
+    constructor(name,rider,color,hungry = true,miam=0){
         this._name = name;
         this._rider = rider;
         this._color = color;
         this._hunger = hungry;
+        this._miam = miam;
     }
 
     get name(){
@@ -27,7 +28,8 @@ class Dragon{
     }
 
     eat(){
-        if(this.hungry=true){
+        this._miam++
+        if(this._miam >= 3){
             return this._hunger = false;
         }
     }
